@@ -52,7 +52,7 @@ def main(link):
     Either provide the single link or the file needing parsing.
     """
     click.clear()
-    links_list = re.findall(URL_REGEX, link)
+    links_list = set(re.findall(URL_REGEX, link))
     if links_list:
         print('Links were found')
         print(links_list)
